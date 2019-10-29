@@ -1,0 +1,21 @@
+{
+  "name": "natutils",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ZhangZisu/natutils.git",
+  "author": "ZhangZisu <admin@zhangzisu.cn>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "stun": "^2.0.0",
+    "yargs": "^14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
