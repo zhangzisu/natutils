@@ -19,4 +19,4 @@ const main = async () => {
   }
 }
 
-main().catch(e => console.log(e)).finally(() => process.exit(0))
+main().catch(e => console.log(e))
