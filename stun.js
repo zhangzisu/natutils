@@ -1,15 +1,12 @@
-const stun = require('stun')
-const { STUN_BINDING_REQUEST, STUN_ATTR_MAPPED_ADDRESS } = stun.constants
-
 exports.publicAddress = (s) => new Promise((resolve) => {
-  const request = stun.createMessage(STUN_BINDING_REQUEST)
+  const PSK = Buffer.from('FUCK IT')
   const i = setInterval(() => {
-    s.send(request.toBuffer(), 3478, 'stun.ideasip.com')
+    s.send(PSK, 3379, 'api.zhangzisu.cn')
   }, 100)
-  s.on('message', (msg) => {
+  const l = (msg) => {
     clearInterval(i)
-    s.removeAllListeners()
-    const stunMsg = stun.decode(msg)
-    resolve(stunMsg.getAttribute(STUN_ATTR_MAPPED_ADDRESS).value)
-  })
+    s.removeListener('message', l)
+    resolve(console.log(Buffer.from(msg.toString(), 'base64').toString()))
+  }
+  s.on('message', l)
 })

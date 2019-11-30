@@ -7,7 +7,6 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "stun": "^2.0.0",
     "yargs": "^14.2.0"
   },
   "devDependencies": {
